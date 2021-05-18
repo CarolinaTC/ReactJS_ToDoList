@@ -4,6 +4,7 @@ import './App.css';
 // import components
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
+import todolistIcon from "./image/todolistIcon.png";
 
 
 
@@ -47,9 +48,15 @@ function App() {
 
   return (
     <div className="App">
+      
       <header>
-        <h1> To Do List  </h1>
+        <img src={todolistIcon} height={100} width={100} />
+        
+        <h3> Organise yourself...  <h1> ... make a list! </h1>   </h3>
+             
       </header>
+
+
       <Form setStatus={setStatus} inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
       <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}  />
 
